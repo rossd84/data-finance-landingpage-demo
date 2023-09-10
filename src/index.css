@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #000300;
+}
+
+.nav-hover a{
+  position: relative;;
+}
+
+.nav-hover a::after {
+  position: absolute;
+  content: "";
+  bottom: -0.2rem;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #00df9a;
+  transform-origin: left;
+  transition-timing-function: ease-in;
+  transition-duration: 200ms;
+}
+
+.nav-hover:hover a::after {
+  width: 100%;
+}
+
+.svg-color-accent {
+    filter: invert(67%) sepia(35%) saturate(5258%) hue-rotate(111deg) brightness(103%) contrast(84%);
+}
